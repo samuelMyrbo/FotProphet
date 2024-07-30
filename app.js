@@ -13,7 +13,7 @@ const { isActiveRoute } = require('./server/helpers/routeHelpers');
 
 const app = express();
 //might use web provder port
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 //CONNECT TO DB
 connectDB();
