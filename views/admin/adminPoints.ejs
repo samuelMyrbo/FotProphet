@@ -1,0 +1,324 @@
+ 
+ 
+ </head>
+ 
+ <h1 class="predTitle">EUROMANAGER</h1>
+ 
+ 
+           
+ 
+ <div class="predictNav">
+ 
+   <a href="/adminEuromanager" class="predItems">Pick team</a>
+ 
+   <a href="/adminPoints" class="predItems">Points</a>  
+ 
+   <a href="/adminTransfers" class="predItems">Transfers</a>  
+   
+   <a href="/adminStandings" class="predItems">Standings</a>  
+ 
+ </div>          
+ 
+ 
+     <br> <br>
+ 
+ 
+     <h1 class="predTitle2">POINTS</h1>
+ 
+  <br>
+ </div>
+ 
+ 
+ 
+ <div class="predictInfo">
+ 
+   
+  
+       <!-- -->
+       <div class="formationclass" id="formation">
+ 
+        
+         <div class="keeperDiv" id="keeperDiv442">
+ 
+           <div class="player1Div" id="player1">
+             <img src="/img/playerShirt.png">
+             <p class="pname"><% 
+               let playerName1 = 'player'; 
+               try { 
+                   if (players.length > 0) { 
+                     playerName1 = players[0].name; 
+                   } 
+               } catch (error) { 
+                   console.error('Error accessing player name:', error); 
+               } 
+           %>
+           <%= playerName1 %></p>
+           <p class="pPoints"><%= players[0].team %></p> </div>
+ 
+         </div>
+      
+               <!-- -------------------------->
+ 
+         <div class="defenceDiv" id="defenceDiv442">
+ 
+       <div class="player2Div" id="player2"> 
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName2 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName2 = players[1].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName2 %></p>
+       <p class="pPoints"><%= players[1].team %></p>
+      </div>
+ 
+       <div class="player3Div" id="player3"> 
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName3 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName3 = players[2].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName3 %></p>
+       <p class="pPoints"><%= players[2].team %></p> </div>
+ 
+       <div class="player4Div" id="player4">
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName4 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName4 = players[3].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName4 %></p>
+       <p class="pPoints"><%= players[2].team %></p> </div>
+ 
+ 
+       <div class="player5Div" id="player5">
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName5 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName5 = players[4].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName5 %></p>
+       <p class="pPoints"><%= players[4].team %></p> </div>
+     </div>
+ 
+ 
+ 
+                   <!-- -------------------------->
+ 
+                   <div class="midfieldDiv" id="midfieldDiv442">
+ 
+ 
+       <div class="player6Div" id="player6">
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName6 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName6 = players[5].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName6 %></p>
+       <p class="pPoints"><%= players[5].team %></p> </div>
+ 
+       <div class="player7Div" id="player7">  
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName7 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName7 = players[6].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName7 %></p>
+       <p class="pPoints"><%= players[6].team %></p> </div>
+ 
+       <div class="player8Div" id="player8"> 
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName8 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName8 = players[7].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName8 %></p>
+       <p class="pPoints"><%= players[7].team %></p> </div>
+ 
+       <div class="player9Div" id="player9"> 
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName9 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName9 = players[8].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName9 %></p>
+       <p class="pPoints"><%= players[8].team %></p> </div>
+ 
+     </div>
+ 
+ 
+ 
+     <div class="attackDiv" id="attackDiv442">
+ 
+ 
+       <div class="player10Div" id="player10"> 
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName10 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName10 = players[9].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName10 %></p> 
+       <p class="pPoints"><%= players[9].team %></p></div>
+ 
+       <div class="player11Div" id="player11"> 
+         <img src="/img/playerShirt.png">
+         <p class="pname"><% 
+           let playerName11 = 'player'; 
+           try { 
+               if (players.length > 0) { 
+                   playerName11 = players[10].name; 
+               } 
+           } catch (error) { 
+               console.error('Error accessing player name:', error); 
+           } 
+       %>
+       <%= playerName11 %></p>
+       <p class="pPoints"><%= players[10].team %></p> </div>
+       
+     </div>
+ 
+ 
+        </div>
+ 
+ 
+ 
+ 
+ 
+ 
+     <img src="/img/soccerField.png" class="fieldImg">
+ 
+   
+     <table class="managerTable">
+ 
+       
+       
+ 
+       <div class="benchBG">
+       
+         
+         <div class="benchBG2">
+           <br><br><br>
+           <div class="player12Div" id="player12"> 
+             <img src="/img/playerShirt.png">
+             <p class="pname"><% 
+               let playerName12 = 'player'; 
+               try { 
+                   if (players.length > 0) { 
+                     playerName12 = players[11].name; 
+                   } 
+               } catch (error) { 
+                   console.error('Error accessing player name:', error); 
+               } 
+           %>
+           <%= playerName12 %></p>
+           <p class="pPoints"><%= players[11].team %></p> </div>
+   
+           <div class="player13Div" id="player13"> 
+             <img src="/img/playerShirt.png">
+             <p class="pname"><% 
+               let playerName13 = 'player'; 
+               try { 
+                   if (players.length > 0) { 
+                     playerName13 = players[12].name; 
+                   }
+               } catch (error) { 
+                   console.error('Error accessing player name:', error); 
+               } 
+           %>
+           <%= playerName13 %></p>
+           <p class="pPoints"><%= players[12].team %></p> </div>
+   
+           <div class="player14Div" id="player14"> 
+             <img src="/img/playerShirt.png">
+             <p class="pname"><% 
+               let playerName14 = 'player'; 
+               try { 
+                   if (players.length > 0) { 
+                     playerName14 = players[13].name; 
+                   } 
+               } catch (error) { 
+                   console.error('Error accessing player name:', error); 
+               } 
+           %>
+           <%= playerName14 %></p>
+           <p class="pPoints"><%= players[13].team %></p> </div>
+   
+           <div class="player15Div" id="player15"> 
+             <img src="/img/playerShirt.png">
+             <p class="pname"><% 
+               let playerName15 = 'player'; 
+               try { 
+                   if (players.length > 0) { 
+                     playerName15 = players[14].name; 
+                   } 
+               } catch (error) { 
+                   console.error('Error accessing player name:', error); 
+               } 
+           %>
+           <%= playerName15 %></p>
+           <p class="pPoints"><%= players[14].team %></p> </div>
+         </div>
+         </div>
+         
+   
+ 
+ </div>
+ 
+ 
+ 
+ 
+     
+ 

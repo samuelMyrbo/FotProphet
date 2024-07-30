@@ -1,0 +1,776 @@
+<script>
+  
+</script>
+
+
+
+
+<h1 class="predTitle">EUROMANAGER</h1>
+
+
+          
+
+<div class="predictNav">
+
+  <a href="/adminEuromanager" class="predItems">Pick team</a>
+
+  <a href="/adminPoints" class="predItems">Points</a>  
+
+  <a href="/adminTransfers" class="predItems">Transfers</a>  
+  
+  <a href="/adminStandings" class="predItems">Standings</a>  
+
+</div>          
+
+
+    <br> <br>
+
+
+    <h1 class="predTitle2">TRANSFERS</h1>
+
+    <div class="predictNav">
+
+      <a href="/adminEuromanager" class="predItems2">Save team</a>  
+      
+      <a href="/adminEuromanager" class="predItems2">Chip 1</a> 
+
+      <a href="/adminEuromanager" class="predItems2">Chip 2</a> 
+
+    
+    </div>  
+
+
+
+
+    <br>
+
+<div class="predictInfo">
+ 
+   
+  
+   <!-- -->
+   <div class="formationclass" id="formation">
+
+    <br>
+    <div class="keeperDiv" id="keeperDiv442x">
+
+      <div class="player1Div" id="player1GK">
+        <img src="/img/playerShirt.png" id="playerShirt1">
+        <p class="pname"><% 
+          let playerName1 = 'player'; 
+          try { 
+              if (players.length > 0) { 
+                playerName1 = players[0].name; 
+              } 
+          } catch (error) { 
+              console.error('Error accessing player name:', error); 
+          } 
+      %>
+      <%= playerName1 %></p>
+      <p class="pPoints"><%= players[0].team %></p> </div>
+
+      <div class="player2Div" id="player2GK"> 
+        <img src="/img/playerShirt.png" id="playerShirt2">
+        <p class="pname"><% 
+          let playerName2 = 'player'; 
+          try { 
+              if (players.length > 0) { 
+                  playerName2 = players[1].name; 
+              } 
+          } catch (error) { 
+              console.error('Error accessing player name:', error); 
+          } 
+      %>
+      <%= playerName2 %></p>
+      <p class="pPoints"><%= players[1].team %></p>
+     </div>
+
+
+    </div>
+ 
+          <!-- -------------------------->
+
+    <div class="defenceDiv" id="defenceDiv442x">
+
+ 
+
+  <div class="player3Div" id="player3DF"> 
+    <img src="/img/playerShirt.png" id="playerShirt3">
+    <p class="pname"><% 
+      let playerName3 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+              playerName3 = players[2].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName3 %></p>
+  <p class="pPoints"><%= players[2].team %></p> </div>
+
+  <div class="player4Div" id="player4DF">
+    <img src="/img/playerShirt.png" id="playerShirt4">
+    <p class="pname"><% 
+      let playerName4 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+              playerName4 = players[3].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName4 %></p>
+  <p class="pPoints"><%= players[3].team %></p> </div>
+
+
+  <div class="player5Div" id="player5DF">
+    <img src="/img/playerShirt.png" id="playerShirt5">
+    <p class="pname"><% 
+      let playerName5 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+              playerName5 = players[4].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName5 %></p>
+  <p class="pPoints"><%= players[4].team %></p> </div>
+
+
+<div class="player6Div" id="player6DF">
+  <img src="/img/playerShirt.png" id="playerShirt6">
+  <p class="pname"><% 
+    let playerName6 = 'player'; 
+    try { 
+        if (players.length > 0) { 
+            playerName6 = players[5].name; 
+        } 
+    } catch (error) { 
+        console.error('Error accessing player name:', error); 
+    } 
+%>
+<%= playerName6 %></p>
+<p class="pPoints"><%= players[5].team %></p> </div>    
+
+
+<div class="player7Div" id="player7DF">  
+  <img src="/img/playerShirt.png" id="playerShirt7">
+  <p class="pname"><% 
+    let playerName7 = 'player'; 
+    try { 
+        if (players.length > 0) { 
+            playerName7 = players[6].name; 
+        } 
+    } catch (error) { 
+        console.error('Error accessing player name:', error); 
+    } 
+%>
+<%= playerName7 %></p>
+<p class="pPoints"><%= players[6].team %></p> </div>
+
+
+
+    </div>
+
+              <!---------------------------->
+
+              <div class="midfieldDiv" id="midfieldDiv442x">             
+               
+                <div class="player8Div" id="player8MD"> 
+                  <img src="/img/playerShirt.png" id="playerShirt8">
+                  <p class="pname"><% 
+                    let playerName8 = 'player'; 
+                    try { 
+                        if (players.length > 0) { 
+                            playerName8 = players[7].name; 
+                        } 
+                    } catch (error) { 
+                        console.error('Error accessing player name:', error); 
+                    } 
+                %>
+                <%= playerName8 %></p>
+                <p class="pPoints"><%= players[7].team %></p> </div>
+
+  
+  <div class="player12Div" id="player12MD"> 
+    <img src="/img/playerShirt.png" id="playerShirt12">
+    <p class="pname"><% 
+      let playerName12 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+            playerName12 = players[11].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName12 %></p>
+  <p class="pPoints"><%= players[11].team %></p> </div>
+
+  <div class="player13Div" id="player13MD"> 
+    <img src="/img/playerShirt.png" id="playerShirt13">
+    <p class="pname"><% 
+      let playerName13 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+            playerName13 = players[12].name; 
+          }
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName13 %></p>
+  <p class="pPoints"><%= players[12].team %></p> </div>
+
+  <div class="player14Div" id="player14MD"> 
+    <img src="/img/playerShirt.png" id="playerShirt14">
+    <p class="pname"><% 
+      let playerName14 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+            playerName14 = players[13].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName14 %></p>
+  <p class="pPoints"><%= players[13].team %></p> </div>
+
+  <div class="player15Div" id="player15MD"> 
+    <img src="/img/playerShirt.png" id="playerShirt15">
+    <p class="pname"><% 
+      let playerName15 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+            playerName15 = players[14].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName15 %></p>
+  <p class="pPoints"><%= players[14].team %></p> </div>
+
+</div>
+
+
+
+<div class="attackDiv" id="attackDiv442x">
+
+  
+
+  <div class="player9Div" id="player9AT"> 
+    <img src="/img/playerShirt.png" id="playerShirt9">
+    <p class="pname"><% 
+      let playerName9 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+              playerName9 = players[8].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName9 %></p>
+  <p class="pPoints"><%= players[8].team %></p> </div>
+
+
+
+  <div class="player10Div" id="player10AT"> 
+    <img src="/img/playerShirt.png" id="playerShirt10">
+    <p class="pname"><% 
+      let playerName10 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+              playerName10 = players[9].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName10 %></p> 
+  <p class="pPoints"><%= players[9].team %></p></div>
+
+ 
+  <div class="player11Div" id="player11AT"> 
+    <img src="/img/playerShirt.png" id="playerShirt11">
+    <p class="pname"><% 
+      let playerName11 = 'player'; 
+      try { 
+          if (players.length > 0) { 
+              playerName11 = players[10].name; 
+          } 
+      } catch (error) { 
+          console.error('Error accessing player name:', error); 
+      } 
+  %>
+  <%= playerName11 %></p>
+  <p class="pPoints"><%= players[10].team %></p> </div>
+
+  
+</div>
+
+
+   </div>
+
+
+
+
+
+   <img src="/img/soccerField.png" width="750" height="650" class="fieldImg2">
+
+   
+<div class="sideContainer">
+
+
+  <div class="changeArrowClass">
+  <p class="changeArrowText">Page: <span id="page-number"></span> </p> <img src="/img/changeArrow.png" width="50" height="50" class="changeArrow2" style="transform: rotate(90deg);">  <img src="/img/changeArrow.png" width="50" height="50" class="changeArrow1" style="transform: rotate(-90deg);">
+</div>
+
+  <div class="labelTitles">
+    <p class="posTitle">POS</p>    <p class="posTitle">TEA</p>    <p class="posTitle">PRI</p>
+  </div>
+   
+
+   <div class="filterDiv">
+
+    <select id="dropdownPos">
+      <option value="option1">ALL</option>
+      <option value="option2">GK</option>
+      <option value="option3">DEF</option>
+      <option value="option4">MID</option>
+      <option value="option5">ATT</option>
+  </select>
+
+  <select id="dropdownTeam">
+    <option value="option1">ALL</option>
+    <option value="option2">MAN</option>
+    <option value="option3">TOT</option>
+    <option value="option4">ARS</option>
+    <option value="option5">FUL</option>
+</select>
+
+
+<select id="dropdownPrice">
+  <option value="option1">ALL</option>
+  <option value="option2">12</option>
+  <option value="option3">11</option>
+  <option value="option4">10</option>
+  <option value="option5">9</option>
+</select>
+
+   </div>
+
+   <br>
+      <table id="managerTable">
+        <thead>
+          
+            <tr>
+                <th>POS</th>
+                <th>NAM</th>
+                <th>TEA</th>
+                <th>POI</th>
+                <th>PRI</th>
+            </tr>
+        </thead>
+        <tbody>
+         
+
+            <tr>
+              <form action="/add-player" method="POST">
+                <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+              <td><input type="hidden" name="position" value="GK">GK</td>
+                <td><input type="hidden" name="name" value="Mario Suareza">Mario Suareza</td>
+                <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+                <td><input type="hidden" name="points" value="1">1</td>
+                <td><input type="hidden" name="price" value="2">2</td>
+           
+              </form>        
+          </tr>
+
+          <tr>
+            <form action="/add-player" method="POST">
+              <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+              <td><input type="hidden" name="position" value="GK">GK</td>
+              <td><input type="hidden" name="name" value="Mario Suarezz"><%= username %></td>
+              <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+              <td><input type="hidden" name="points" value="1">1</td>
+              <td><input type="hidden" name="price" value="2">2</td>
+            </form>             
+        </tr>
+
+        <tr>
+          <form action="/add-player" method="POST">
+            <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+            <td><input type="hidden" name="position" value="GK">GK</td>
+            <td><input type="hidden" name="name" value="Mario Lamino">Mario Lamino</td>
+            <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+            <td><input type="hidden" name="points" value="1">1</td>
+            <td><input type="hidden" name="price" value="2">2</td>
+          </form>             
+      </tr>
+
+        
+
+
+
+        <tr>
+          <form action="/add-player" method="POST">
+            <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+            <td><input type="hidden" name="position" value="DEF">DEF</td>
+            <td><input type="hidden" name="name" value="Kieran Trippier">Kieran Trippier</td>
+            <td><input type="hidden" name="team" value="Tottenham">TOT</td>
+            <td><input type="hidden" name="points" value="1">1</td>
+            <td><input type="hidden" name="price" value="2">2</td>
+          </form>             
+      </tr>
+
+      <tr>
+        <form action="/add-player" method="POST">
+          <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+          <td><input type="hidden" name="position" value="DEF">DEF</td>
+          <td><input type="hidden" name="name" value="Kieran Long">Kieran Long</td>
+          <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+          <td><input type="hidden" name="points" value="1">1</td>
+          <td><input type="hidden" name="price" value="2">2</td>
+        </form>             
+    </tr>
+
+    <tr>
+      <form action="/add-player" method="POST">
+        <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+        <td><input type="hidden" name="position" value="DEF">DEF</td>
+        <td><input type="hidden" name="name" value="Kieran Jones">Kieran Jones</td>
+        <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+        <td><input type="hidden" name="points" value="1">1</td>
+        <td><input type="hidden" name="price" value="2">2</td>
+      </form>             
+  </tr>
+
+  <tr>
+    <form action="/add-player" method="POST">
+      <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+      <td><input type="hidden" name="position" value="DEF">DEF</td>
+      <td><input type="hidden" name="name" value="Kieran Stones">Kieran Stones</td>
+      <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+      <td><input type="hidden" name="points" value="1">1</td>
+      <td><input type="hidden" name="price" value="2">2</td>
+    </form>             
+</tr>
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="DEF">DEF</td>
+    <td><input type="hidden" name="name" value="Kieran Shaw">Kieran Shaw</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> 
+    <td><input type="hidden" name="position" value="MID">MID</td>
+    <td><input type="hidden" name="name" value="Sean Duby">Sean Duby</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="MID">MID</td>
+    <td><input type="hidden" name="name" value="Sean Mattock">Sean Mattock</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="MID">MID</td>
+    <td><input type="hidden" name="name" value="Sean Nmp">Sean Nmp</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="MID">MID</td>
+    <td><input type="hidden" name="name" value="Sean Usher">Sean Usher</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="MID">MID</td>
+    <td><input type="hidden" name="name" value="Sean Longstaff">Sean Longstaff</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="ATT">ATT</td>
+    <td><input type="hidden" name="name" value="Sean Darlo">Sean Darlo</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="ATT">ATT</td>
+    <td><input type="hidden" name="name" value="Sean Arnautovic">Sean Arnautovic</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+
+
+<tr>
+  <form action="/add-player" method="POST">
+    <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+    <td><input type="hidden" name="position" value="ATT">ATT</td>
+    <td><input type="hidden" name="name" value="Sean Marlo">Sean Marlo</td>
+    <td><input type="hidden" name="team" value="Arsenal">ARS</td>
+    <td><input type="hidden" name="points" value="1">1</td>
+    <td><input type="hidden" name="price" value="2">2</td>
+  </form>             
+</tr>
+
+        
+<!--       <td><button type="submit" class="add-player-btn">Add</button></td>  -->
+          
+
+            
+            
+            <!-- Add more rows as needed -->
+        </tbody>
+        
+
+    </table>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="popup" class="popup">
+  <p>Username is required</p>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+
+<script>
+
+      //SCROLLING THROUGH PLAYERS LIST
+var currentpage = 0
+var maxpage = 2
+
+document.getElementById('page-number').innerText = (currentpage+1) + '/' + maxpage;
+
+
+const rowsPerPage = 13;
+
+  function displayTable(currentpage) {
+    console.log('display table run')
+
+    
+    const table = document.getElementById('managerTable');
+            const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            const totalRows = rows.length;
+            
+            for (let i = 0; i < totalRows; i++) {
+                rows[i].style.display = (i >= currentpage * rowsPerPage && i < (currentpage + 1) * rowsPerPage) ? '' : 'none';
+            }
+  }
+
+  
+
+  displayTable(0)
+
+
+//-----------
+
+
+
+
+// Select the element
+const hoverBox = document.querySelector('.changeArrow2');
+hoverBox.style.opacity = '0.5';
+
+// Add event listeners for mouseenter and mouseleave
+hoverBox.addEventListener('mouseenter', () => {
+    hoverBox.style.opacity = '1';
+});
+
+hoverBox.addEventListener('mouseleave', () => {
+    hoverBox.style.opacity = '0.5';
+});
+
+hoverBox.addEventListener('click', () => {
+
+  currentpage=currentpage-1
+  if(currentpage<1) {
+    currentpage=1
+  }
+
+  displayTable(currentpage-1)
+
+  document.getElementById('page-number').innerText = currentpage + '/' + maxpage;
+
+});
+
+//--
+
+
+
+// Select the element
+const hoverBox2 = document.querySelector('.changeArrow1');
+hoverBox2.style.opacity = '0.5';
+
+// Add event listeners for mouseenter and mouseleave
+hoverBox2.addEventListener('mouseenter', () => {
+    hoverBox2.style.opacity = '1';
+});
+
+hoverBox2.addEventListener('mouseleave', () => {
+    hoverBox2.style.opacity = '0.5';
+});
+
+hoverBox2.addEventListener('click', () => {
+
+  currentpage=currentpage+1
+  if(currentpage>maxpage) {
+    currentpage=maxpage
+  }
+
+  displayTable(currentpage-1)
+
+
+  document.getElementById('page-number').innerText = currentpage   + '/' + maxpage;
+
+});
+
+
+
+
+
+
+//--------------
+
+
+
+
+
+
+
+
+  document.getElementById('predictionsForm').addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const formData = new FormData(form);
+    const formJSON = JSON.stringify(Object.fromEntries(formData.entries()));
+
+    try {
+      const response = await fetch('/submit-predictions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: formJSON
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        if (result.message === 'Username is required') {
+          showPopup();
+        } else {
+          alert(result.message); // Handle other errors
+        }
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  });
+
+  function showPopup() {
+    document.getElementById('popup').classList.add('active');
+  }
+
+  function closePopup() {
+    document.getElementById('popup').classList.remove('active');
+  }
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+    

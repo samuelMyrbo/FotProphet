@@ -1,0 +1,59 @@
+  <div class="homeInfo">
+        
+    <div class="predictHome">
+        <h1>Predictor</h1>
+        <p>Predict different football results weekly,<br>
+        compete with your friends in different leagues</p>
+    </div>
+
+    <div class="fantasyHome">
+        <h1>Fantasy-manager</h1>
+        <p>Coming soon....<br>
+        Choose your team and compete</p>
+    </div>
+
+  </div>
+
+  <br><br>
+  
+  <h1 style="text-align: center; font-size: 28px;">NEWS</h1>
+
+  
+  
+
+      <div class="articlePoint">
+
+      <% data.forEach(post => { %>      
+
+
+        <div class="eachPost">
+              <a href="/post/<%- post._id %>">
+                <span class="articleTitles"><%= post.title %></span>
+              </a>
+
+              <div class="articleDate">
+                <span class="article-list__date">Date posted: <%= post.createdAt.toDateString() %></span>
+      
+              </div>
+              
+        </div>
+
+        
+
+        <% }) %>
+
+        <% if (nextPage !== null) { %>
+          <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+        <% } %>
+        
+      
+      
+      
+    
+    </div>
+    
+       
+  
+  
+  
+

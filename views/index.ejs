@@ -1,0 +1,43 @@
+  <br><br>
+  
+  <h1 style="text-align: center; font-size: 28px;">NEWS</h1>
+
+  
+  
+
+      <div class="articlePoint">
+
+      <% data.forEach(post => { %>      
+
+
+        <div class="eachPost">
+              <a href="/post/<%- post._id %>">
+                <span class="articleTitles"><%= post.title %></span>
+              </a>
+
+              <div class="articleDate">
+                <span class="article-list__date">Date posted: <%= post.createdAt.toDateString() %></span>
+      
+              </div>
+              
+        </div>
+
+        
+
+        <% }) %>
+
+        <% if (nextPage !== null) { %>
+          <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+        <% } %>
+        
+      
+      
+      
+    
+    </div>
+    
+       
+  
+  
+  
+
