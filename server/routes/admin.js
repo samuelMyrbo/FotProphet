@@ -412,7 +412,7 @@ router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
   //res.json({ message: 'Logout successful.'});
-  res.redirect('/');
+  res.redirect('/register');
 });
 
 
@@ -573,7 +573,16 @@ router.get('/adminPredictor',authMiddleware,(req,res) => {
 });
 
 
-router.get('/adminEuromanager',authMiddleware,async (req,res) => {
+router.get('/adminHome',authMiddleware,(req,res) => {
+  const locals = {
+    username: req.username,
+    layout: adminLayout
+  }
+  res.render("admin/adminHome",locals);
+});
+
+
+router.get('/adminEuromanager',authMiddleware,async(req,res) => {
   try {
     const users = await User.find({}).lean(); // Fetch all users and their players
     let players = [];

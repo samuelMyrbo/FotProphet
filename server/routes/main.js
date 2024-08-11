@@ -140,6 +140,9 @@ router.get('/euromanager',(req,res) => {
   res.render("euromanager");
 });
 
+router.get('/home',(req,res) => {
+  res.render("home");
+});
 
 
 

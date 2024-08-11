@@ -1,64 +1,225 @@
-<h1 class="predTitle">PREDICTOR</h1>
 
 
+<!DOCTYPE html>
+<html lang="en">
 
-          
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Dashboard Design #2 | AsmrProg</title>
+</head>
 
-    <div class="predictNav">
+<body>
 
-        <a href="/adminPredictor" class="predItems">Predictions</a>
+    <!-- Sidebar -->
+    <div class="sidebar">  
+ 
+        <img src="/img/siteLogo.png" width="65" height="65">
 
-        <a href="/adminStandingsPredictor" class="predItems">Standings</a>  
+        <a class="logo">                   
+
+            <div class="logo-name" style="font-size: 36px;">   
+                <span>Fot</span>Prophet</div>                    
+                                
+        </a>
+       
         
-        <a href="/adminHistory" class="predItems">History</a>  
+        <ul class="side-menu">
+            <li><a href="/adminHome"></i>&nbsp;&nbsp;Home</a></li>
 
-    </div>        
+            <li><a href="/adminEuromanager"></i>&nbsp;&nbsp;Euromanager</a></li>
+            <li><a href="/adminPredictor"></i>&nbsp;&nbsp;Predictor</a></li>
+            <li><a href="/dashboard"></i>&nbsp;&nbsp;Profile</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+               
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
 
-    <br> <br>
-    
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+          
+           
 
 
-    <h1 class="predTitle2">HISTORY</h1>
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <p><b>Username: </b><%= locals.username %></p>
 
+            </a>
+        </nav>
 
-        <div class="predictInfo">
+        <!-- End of Navbar -->
 
-      
-        <table>
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Competition</th>
-                    <th>Home</th>
-                    <th>H</th>
-                    <th>A</th>
-                    <th>Away</th>
-                    <th>Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2024-06-30</td>
-                    <td>Premier League</td>
-                    <td>Team A</td>
-                    <td><input placeholder="-" class="result">
-                    </td>
-                    <td><input placeholder="-" class="result">
-                    </td>
-                    <td>Team B</td>
-                    <td>Team B</td>
+        <main>
+            <div class="header">
+                <div class="left">
                     
-                </tr>
+                        <h1>History</h1>
+                        <ul class="breadcrumb">
+                            
+                            <a href="/adminPredictor">Predictions</a>
+                            /
+                            <a href="/adminStandingsPredictor">Standings</a>
+                            /
+                            <a href="/adminHistory">History</a>
+                        </ul>
+                    
+                </div>
+               
+            </div>
+
+        
+
+            <div class="bottom-data">
+               <div class="orders">
                 
-                <!-- Add more rows as needed -->
-            </tbody>
-        </table>
+            <form action="/submit-predictions" method="POST">
+                <input type="hidden" name="username" value="<%= username %>"> <!-- dynamically set username -->
+
+
+            <table class="predTable">
+                <thead>
+                    <tr>
+                        <th style="font-size: 24px; text-align: center;">Date</th>
+                        <th style="font-size: 24px; text-align: center;">Competition</th>
+                        <th style="font-size: 24px; text-align: center;">Home</th>
+                        <th style="font-size: 24px; text-align: center;">H</th>
+                        <th style="font-size: 24px; text-align: center;">A</th>
+                        <th style="font-size: 24px; text-align: center;">Away</th>
+                        <th style="font-size: 24px; text-align: center;">Goalscorer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-06-30</td>
+                        <td>Premier League</td>
+                        <td>Tottenham</td>
+                        <td><input type="number" name="Tottenham_H" placeholder="-" class="result" min="0" max="9"></td>
+                        <td><input type="number" name="Arsenal_A" placeholder="-" class="result" min="0" max="9"></td>
+                        <td>Arsenal</td>
+                        <td>
+                        <select id="dropdown">
+                            <option value="option1">Option 1</option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>2024-06-30</td> 
+                        <td>Premier League</td>
+                        <td>Newcastle</td>
+                        <td><input type="number" name="Newcastle_H" placeholder="-" class="result" min="0" max="9"></td>
+                        <td><input type="number" name="Brighton_A" placeholder="-" class="result" min="0" max="9"></td>
+                        <td>Brighton</td>
+                        <td>
+                            <select id="dropdown">
+                                <option value="option1">Lukaku</option>
+                                <option value="option2">Guidetti</option>
+                                <option value="option3">Dewsbury-Hall</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <button type="submit" class="actionButtons">Submit Predictions</button>
+        
+        
+        </form>
+               </div>
+               
+            </div>
+                <!-- Reminders -->
+                
+
+                <!-- End of Reminders-->
+
+            </div>
+
+        </main>
+
     </div>
 
+</body>
 
-</div>
 
 
-   
 
-    
+
+<script>
+const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
+
+sideLinks.forEach(item => {
+    const li = item.parentElement;
+    item.addEventListener('click', () => {
+        sideLinks.forEach(i => {
+            i.parentElement.classList.remove('active');
+        })
+        li.classList.add('active');
+    })
+});
+
+const menuBar = document.querySelector('.content nav .bx.bx-menu');
+const sideBar = document.querySelector('.sidebar');
+
+menuBar.addEventListener('click', () => {
+    sideBar.classList.toggle('close');
+});
+
+const searchBtn = document.querySelector('.content nav form .form-input button');
+const searchBtnIcon = document.querySelector('.content nav form .form-input button .bx');
+const searchForm = document.querySelector('.content nav form');
+
+searchBtn.addEventListener('click', function (e) {
+    if (window.innerWidth < 576) {
+        e.preventDefault;
+        searchForm.classList.toggle('show');
+        if (searchForm.classList.contains('show')) {
+            searchBtnIcon.classList.replace('bx-search', 'bx-x');
+        } else {
+            searchBtnIcon.classList.replace('bx-x', 'bx-search');
+        }
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+        sideBar.classList.add('close');
+    } else {
+        sideBar.classList.remove('close');
+    }
+    if (window.innerWidth > 576) {
+        searchBtnIcon.classList.replace('bx-x', 'bx-search');
+        searchForm.classList.remove('show');
+    }
+});
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>

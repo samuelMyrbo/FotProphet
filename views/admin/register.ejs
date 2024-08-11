@@ -1,19 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<h1 class="predTitle">Register</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Responsive Dashboard Design #2 | AsmrProg</title>
+</head>
 
-  
-  <br>
-  <div class="homeInfo">
-<form action="/register" method="POST">
+<body>
 
-  <label for="username"><b>Username</b></label>
-  <input type="text" placeholder="Enter Username" name="username">
+    <!-- Sidebar -->
+    <div class="sidebar">  
+ 
+        <img src="/img/siteLogo.png" width="65" height="65">
 
-  <label for="password"><b>Password</b></label>
-  <input type="password" placeholder="Enter Password" name="password">
+        <a class="logo">                   
 
-  <input type="submit" value="Register" class="btn">
+            <div class="logo-name" style="font-size: 36px;">   
+                <span>Fot</span>Prophet</div>                    
+                                
+        </a>
+       
+        
+        <ul class="side-menu">
 
-</form> 
+            <li><a href="/home"></i>&nbsp;&nbsp;Home</a></li>
+          <li><a href="/euromanager"></i>&nbsp;&nbsp;Euromanager</a></li>
+          <li><a href="/predictor"></i>&nbsp;&nbsp;Predictor</a></li>
+          <li><a href="/register"></i>&nbsp;&nbsp;Profile</a></li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+                
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
 
-  </div>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+           
+           
+
+
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/logo.png">
+            </a>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    
+                    <h1>Profile</h1>
+                    
+                </div>
+                
+            </div>
+
+            <div class="bottom-data">
+
+
+
+              <div class="orders">
+
+                <div id="loginDiv">
+                 
+                  <form action="/admin" method="POST">
+                    <h3 style="font-size: 30px;">Login</h3>
+                    <br><br>
+                    <label for="username"><b>Username</b></label>
+                    <br>
+                    <input type="text" placeholder="Enter Username" name="username">
+                    <br> <br>
+                    <label for="password"><b>Password</b></label>
+                    <br>
+                    <input type="password" placeholder="Enter Password" name="password">
+                    <br><br>
+                    <input type="submit" value="Login" class="btn">
+                  
+                  </form>
+                  
+                    
+                   
+                </div>
+                <br>
+              </div>
+
+                <div class="orders">
+
+                  <div id="loginDiv">
+
+                    <form action="/register" method="POST">
+                      <h3 style="font-size: 30px;">Register</h3>
+                        <br><br>
+                      <label for="username" style="font-size: 22px;"><b>Username</b></label>
+                      <br>
+                      <input type="text" placeholder="Enter Username" name="username" style="width: 200px; height: 25px;">
+
+                       <br><br>
+                      <label for="password"  style="font-size: 22px;"><b>Password</b></label>
+                      <br>
+                      <input type="password" placeholder="Enter Password" name="password" style="width: 200px; height: 25px;">
+                      <br><br>
+                      <input type="submit" value="Register" class="btn">
+                    
+                    </form>    
+                     
+                  </div>
+
+
+
+
+
+                </div>
+
+                <!-- Reminders -->
+                
+
+                <!-- End of Reminders-->
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+
+
+
+
+<script>
+const sideLinks = document.querySelectorAll('.sidebar .side-menu li a:not(.logout)');
+
+sideLinks.forEach(item => {
+    const li = item.parentElement;
+    item.addEventListener('click', () => {
+        sideLinks.forEach(i => {
+            i.parentElement.classList.remove('active');
+        })
+        li.classList.add('active');
+    })
+});
+
+const menuBar = document.querySelector('.content nav .bx.bx-menu');
+const sideBar = document.querySelector('.sidebar');
+
+menuBar.addEventListener('click', () => {
+    sideBar.classList.toggle('close');
+});
+
+const searchBtn = document.querySelector('.content nav form .form-input button');
+const searchBtnIcon = document.querySelector('.content nav form .form-input button .bx');
+const searchForm = document.querySelector('.content nav form');
+
+searchBtn.addEventListener('click', function (e) {
+    if (window.innerWidth < 576) {
+        e.preventDefault;
+        searchForm.classList.toggle('show');
+        if (searchForm.classList.contains('show')) {
+            searchBtnIcon.classList.replace('bx-search', 'bx-x');
+        } else {
+            searchBtnIcon.classList.replace('bx-x', 'bx-search');
+        }
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+        sideBar.classList.add('close');
+    } else {
+        sideBar.classList.remove('close');
+    }
+    if (window.innerWidth > 576) {
+        searchBtnIcon.classList.replace('bx-x', 'bx-search');
+        searchForm.classList.remove('show');
+    }
+});
+
+
+</script>
+
+
+
+
+
+</html>
